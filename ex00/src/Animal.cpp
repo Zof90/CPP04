@@ -12,7 +12,7 @@
 
 #include "Animal.hpp"
 
-Animal::Animal(const std::string &type) : _type(type)
+Animal::Animal()
 {
 }
 Animal::~Animal()

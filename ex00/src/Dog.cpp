@@ -14,7 +14,7 @@
 #include "Dog.hpp"
 #include <iostream>
 
-Dog::Dog(const std::string &type):Animal(type)
+Dog::Dog():Animal()
 {
 	_type = "Dog";
 }
