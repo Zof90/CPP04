@@ -16,7 +16,7 @@
 
 Dog::Dog() : Animal()
 {
-	std::cout << "Dog destructor" << std::endl;
+	std::cout << "Dog constructor" << std::endl;
 	_type = "Dog";
 }
 Dog::~Dog()
