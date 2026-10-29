@@ -14,7 +14,7 @@
 #include "Cat.hpp"
 #include <iostream>
 
-Cat::Cat() : Animal()
+Cat::Cat(const std::string &type) : Animal(type)
 {
 	_type = "Cat";
 }
