@@ -20,7 +20,7 @@ class WrongAnimal
   public:
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &other);
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 	WrongAnimal &operator=(const WrongAnimal &other);
 	const std::string &getType() const;
 	void makeSound() const;

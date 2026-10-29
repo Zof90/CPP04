@@ -16,10 +16,12 @@
 
 WrongCat::WrongCat() : WrongAnimal()
 {
+	std::cout << "WrongCat constructor" << std::endl;
 	_type = "WrongCat";
 }
 WrongCat::~WrongCat()
 {
+	std::cout << "WrongCat destructor" << std::endl;
 }
 WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {

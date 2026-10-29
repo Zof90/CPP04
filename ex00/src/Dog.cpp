@@ -14,12 +14,14 @@
 #include "Dog.hpp"
 #include <iostream>
 
-Dog::Dog():Animal()
+Dog::Dog() : Animal()
 {
+	std::cout << "Dog destructor" << std::endl;
 	_type = "Dog";
 }
 Dog::~Dog()
 {
+	std::cout << "Dog destructor" << std::endl;
 }
 Dog::Dog(const Dog &other) : Animal(other)
 {

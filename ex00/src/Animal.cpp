@@ -11,12 +11,15 @@
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include <iostream>
 
 Animal::Animal()
 {
+	std::cout << "Animal constructor" << std::endl;
 }
 Animal::~Animal()
 {
+	std::cout << "Animal destructor" << std::endl;
 }
 Animal::Animal(const Animal &other)
 {

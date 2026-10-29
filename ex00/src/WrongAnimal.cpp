@@ -15,9 +15,11 @@
 
 WrongAnimal::WrongAnimal()
 {
+	std::cout << "WrongAnimal constructor" << std::endl;
 }
 WrongAnimal::~WrongAnimal()
 {
+	std::cout << "WrongAnimal destructor" << std::endl;
 }
 WrongAnimal ::WrongAnimal(const WrongAnimal &other)
 {
@@ -36,5 +38,5 @@ const std::string &WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-    std::cout << "WrongAnimal song" << std::endl;
+	std::cout << "WrongAnimal song" << std::endl;
 }

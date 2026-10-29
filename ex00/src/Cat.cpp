@@ -14,12 +14,14 @@
 #include "Cat.hpp"
 #include <iostream>
 
-Cat::Cat(): Animal()
+Cat::Cat() : Animal()
 {
+	std::cout << "Cat constructor" << std::endl;
 	_type = "Cat";
 }
 Cat::~Cat()
 {
+	std::cout << "Cat destructor" << std::endl;
 }
 Cat::Cat(const Cat &other) : Animal(other)
 {
