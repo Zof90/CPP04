@@ -23,12 +23,10 @@ Animal::~Animal()
 }
 Animal::Animal(const Animal &other)
 {
-	std::cout << "Animal copy constructor" << std::endl;
 	_type = other._type;
 }
 Animal &Animal::operator=(const Animal &other)
 {
-	std::cout << "Animal copy assignement" << std::endl;
 	_type = other._type;
 	return (*this);
 }

@@ -10,28 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
 #include "Animal.hpp"
+#include "Brain.hpp"
 #include "Cat.hpp"
 #include <iostream>
 
 Cat::Cat() : Animal()
 {
+	_brain = new Brain;
 	std::cout << "Cat constructor" << std::endl;
 	_type = "Cat";
 }
 Cat::~Cat()
 {
+	delete _brain;
 	std::cout << "Cat destructor" << std::endl;
 }
 Cat::Cat(const Cat &other) : Animal(other)
 {
-	std::cout << "Cat copy constructor" << std::endl;
 	_type = other._type;
 }
 Cat &Cat::operator=(const Cat &other)
 {
-	std::cout << "Cat copy assignement" << std::endl;
 	_type = other._type;
 	return (*this);
 }

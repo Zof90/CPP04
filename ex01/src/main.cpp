@@ -10,24 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include <Animal.hpp>
-#include <iostream>
 
+#define LEN 10
 int	main(void)
 {
-	const Animal	*meta = new Animal();
-	const Animal	*j = new Dog();
-	const Animal	*i = new Cat();
+	const Animal	*dog = new Dog();
+	const Animal	*cat = new Cat();
+	Animal **p = new Animal*[LEN];
+	int i = 0;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); // will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete i;
-	delete j;
+	delete cat;	
+	delete dog;
+	while (i < LEN)
+	{
+		p[i++] = new Cat;
+		if (i == LEN)
+			break;
+		p[i++] = new Dog;
+	}
+	i = 0;
+	while(i < LEN)
+	{
+		delete p[i++];
+	}
+	delete[] p;
 	return (0);
 }

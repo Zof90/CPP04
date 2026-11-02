@@ -11,26 +11,28 @@
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 #include "Dog.hpp"
 #include <iostream>
 
 Dog::Dog() : Animal()
 {
+	_brain = new Brain;
 	std::cout << "Dog constructor" << std::endl;
 	_type = "Dog";
 }
 Dog::~Dog()
 {
+	delete	_brain;
+
 	std::cout << "Dog destructor" << std::endl;
 }
 Dog::Dog(const Dog &other) : Animal(other)
 {
-	std::cout << "Dog copy constructor" << std::endl;
 	_type = other._type;
 }
 Dog &Dog::operator=(const Dog &other)
 {
-	std::cout << "Dog copy assignement" << std::endl;
 	_type = other._type;
 	return (*this);
 }

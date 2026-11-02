@@ -12,7 +12,7 @@
 
 ## ARGUMENTS
 
-NAME = WorldFire
+NAME = brain
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -28,11 +28,17 @@ CFILES = $(SRC_DIR)/main.cpp \
 		 $(SRC_DIR)/Animal.cpp \
 		 $(SRC_DIR)/Dog.cpp \
 		 $(SRC_DIR)/Cat.cpp \
+		 $(SRC_DIR)/WrongCat.cpp \
+		 $(SRC_DIR)/WrongAnimal.cpp \
+		 $(SRC_DIR)/Brain.cpp \
 		 
 OFILES = $(CFILES:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 HEADER = INCLUDES/Animal.hpp \
 		 INCLUDES/Dog.hpp \
 		 INCLUDES/Cat.hpp \
+		 INCLUDES/WrongCat.hpp \
+		 INCLUDES/WrongAnimal.hpp \
+		 INCLUDES/Brain.hpp \
 
 ## RULES
 
