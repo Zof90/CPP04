@@ -25,11 +25,13 @@ WrongCat::~WrongCat()
 }
 WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
+	std::cout << "WrongCat copy constructor" << std::endl;
 	_type = other._type;
 }
 WrongCat &WrongCat::operator=(const WrongCat &other)
 {
-	_type = other._type;
+	if (this != &other)
+		_type = other._type;
 	return (*this);
 }
 void WrongCat::makeSound() const

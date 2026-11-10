@@ -25,11 +25,13 @@ Dog::~Dog()
 }
 Dog::Dog(const Dog &other) : Animal(other)
 {
+	std::cout << "dog copy constructor" << std::endl;
 	_type = other._type;
 }
 Dog &Dog::operator=(const Dog &other)
 {
-	_type = other._type;
+	if (this != &other)
+		_type = other._type;
 	return (*this);
 }
 
