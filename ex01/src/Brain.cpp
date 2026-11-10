@@ -27,6 +27,7 @@ Brain::Brain(const Brain &other)
 		this->_idea[i] = other._idea[i];
 		i++;
 	}
+	std::cout << "Brain copy constructor" << std::endl;
 }
 Brain &Brain::operator=(const Brain &other)
 {
@@ -35,6 +36,8 @@ Brain &Brain::operator=(const Brain &other)
 	i = 0;
 	while (i < SIZE)
 	{
+		if (this != &other)
+			break;
 		this->_idea[i] = other._idea[i];
 		i++;
 	}
