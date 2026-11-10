@@ -22,16 +22,14 @@ Brain::Brain()
 }
 Brain::Brain(const Brain &other)
 {
+	_idea = new std::string[IDEA_LEN]();
 	copyRessource(other);
 	std::cout << "Brain copy constructor" << std::endl;
 }
 Brain &Brain::operator=(const Brain &other)
 {
 	if (this != &other)
-	{
-		_idea = new std::string[IDEA_LEN]();
 		copyRessource(other);
-	}
 	return (*this);
 }
 Brain::~Brain()
