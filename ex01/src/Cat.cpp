@@ -35,7 +35,10 @@ Cat::Cat(const Cat &other) : Animal(other)
 Cat &Cat::operator=(const Cat &other)
 {
 	if (this != &other)
+	{
 		_type = other._type;
+		*_brain = *other._brain;
+	}
 	return (*this);
 }
 void Cat::makeSound() const
