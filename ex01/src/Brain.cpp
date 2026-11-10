@@ -13,37 +13,39 @@
 #include "Brain.hpp"
 #include <iostream>
 
+#define IDEA_LEN 100
+
 Brain::Brain()
 {
+	_idea = new std::string[IDEA_LEN]();
 	std::cout << "Brain construcotr" << std::endl;
 }
 Brain::Brain(const Brain &other)
 {
-	int	i;
-
-	i = 0;
-	while (i < SIZE)
-	{
-		this->_idea[i] = other._idea[i];
-		i++;
-	}
+	copyRessource(other);
 	std::cout << "Brain copy constructor" << std::endl;
 }
 Brain &Brain::operator=(const Brain &other)
 {
-	int	i;
-
-	i = 0;
-	while (i < SIZE)
-	{
-		if (this != &other)
-			break;
-		this->_idea[i] = other._idea[i];
-		i++;
-	}
+	if (this != &other)
+		copyRessource(other);
 	return (*this);
 }
 Brain::~Brain()
 {
+	delete [] _idea;
 	std::cout << "Brain destructor" << std::endl;
+}
+
+void Brain::copyRessource(const Brain& other)
+{
+	int	i;
+
+	i = 0;
+	while (i < IDEA_LEN)
+	{
+		if (&other._idea[i])
+			_idea[i] = other._idea[i];
+		i++;
+	}
 }

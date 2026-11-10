@@ -13,7 +13,7 @@
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
 #include <string>
-#define SIZE 100
+
 class Brain 
 {
     public:
@@ -22,7 +22,9 @@ class Brain
     Brain(const Brain& other);
     Brain& operator=(const Brain& other);
     private:
-        std::string _idea[100];
+        void copyRessource(const Brain& other);
+        void clearRessource();
+        std::string *_idea;
 };
 
 #endif

@@ -18,8 +18,8 @@
 Cat::Cat() : Animal()
 {
 	_brain = new Brain;
-	std::cout << "Cat constructor" << std::endl;
 	_type = "Cat";
+	std::cout << "Cat constructor" << std::endl;
 }
 Cat::~Cat()
 {
@@ -30,6 +30,7 @@ Cat::Cat(const Cat &other) : Animal(other)
 {
 	std::cout << "Cat copy constructor" << std::endl;
 	_type = other._type;
+	_brain = new Brain(*other._brain);
 }
 Cat &Cat::operator=(const Cat &other)
 {
