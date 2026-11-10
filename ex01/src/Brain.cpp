@@ -28,7 +28,10 @@ Brain::Brain(const Brain &other)
 Brain &Brain::operator=(const Brain &other)
 {
 	if (this != &other)
+	{
+		_idea = new std::string[IDEA_LEN]();
 		copyRessource(other);
+	}
 	return (*this);
 }
 Brain::~Brain()
@@ -44,8 +47,7 @@ void Brain::copyRessource(const Brain& other)
 	i = 0;
 	while (i < IDEA_LEN)
 	{
-		if (&other._idea[i])
-			_idea[i] = other._idea[i];
+		_idea[i] = other._idea[i];
 		i++;
 	}
 }

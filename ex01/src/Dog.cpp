@@ -23,8 +23,7 @@ Dog::Dog() : Animal()
 }
 Dog::~Dog()
 {
-	delete	_brain;
-
+	delete _brain;
 	std::cout << "Dog destructor" << std::endl;
 }
 Dog::Dog(const Dog &other) : Animal(other)
